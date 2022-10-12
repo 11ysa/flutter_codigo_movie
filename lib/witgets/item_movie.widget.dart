@@ -13,7 +13,9 @@ class ItemsMovieWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DetailPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailPage(movieId: modelMovie.id)));
       },
       child: Container(
         height: height * 0.6,

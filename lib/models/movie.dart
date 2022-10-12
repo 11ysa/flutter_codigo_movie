@@ -1,6 +1,5 @@
 class MovieModel {
   bool adult;
-  String backdropPath;
   List<int> genreIds;
   int id;
   String originalLanguage;
@@ -16,7 +15,6 @@ class MovieModel {
 
   MovieModel({
     required this.adult,
-    required this.backdropPath,
     required this.genreIds,
     required this.id,
     required this.originalLanguage,
@@ -33,7 +31,6 @@ class MovieModel {
 
   factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
         adult: json["adult"],
-        backdropPath: json["backdrop_path"],
         genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
         id: json["id"],
         originalLanguage: json["original_language"],
@@ -50,7 +47,6 @@ class MovieModel {
 
   Map<String, dynamic> toJson() => {
         "adult": adult,
-        "backdrop_path": backdropPath,
         "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
         "id": id,
         "original_language": originalLanguage,
